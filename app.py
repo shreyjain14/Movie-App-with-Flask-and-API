@@ -34,4 +34,5 @@ def movie(movie_id: int):
     return render_template('movie.html', movie=movie_info)
 
 
-app.run()
+if __name__ == "__main__":
+    app.run()
