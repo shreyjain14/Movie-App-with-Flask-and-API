@@ -1,0 +1,58 @@
+<html lang="en">
+
+<head>
+    <title>Movies App</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/nav.css') }}">
+</head>
+
+<body>
+
+    <div class="nav">
+        <div class="nav2">
+            <table>
+                <tr>
+                    <td class="navtd">
+                        <a href="../..">HOME</a>
+                    </td>
+                    <td class="navtd">
+                        <a href="../popular">POPULAR</a>
+                    </td>
+                    <td class="navtd">
+                        <a href="../top_rated">TOP RATED</a>
+                    </td>
+                    <td class="navtd">
+                        <a href="../upcoming">UPCOMING</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br>
+    <div class="main">
+    {% block content %}
+        {% for movie in movies %}
+        <a href="/movie/{{movie.id}}">
+            <div class="movie">
+                <div class="movie_poster" style="background-image: url(http://image.tmdb.org/t/p/w500{{movie.poster_path}});">
+                </div>
+                <br>
+                <div class="text">
+                    <table>
+                        <tr>
+                            <td class="title">
+                                {{movie.title}}
+                            </td>
+                            <td class="votes">
+                                <span class="votebox">{{movie.vote_average}}</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    {% endblock %}
+    </div>
+</body>
+</html>

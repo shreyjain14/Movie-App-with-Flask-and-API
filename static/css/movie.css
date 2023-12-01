@@ -1,0 +1,25 @@
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    backdrop-filter: blur(15px);
+
+}
+
+.movie {
+    width: 500px;
+    height: 750px;
+}
+
+#title {
+    font-weight: bold;
+    color: white;
+    font-size: 75px;
+    opacity: 1;
+    z-index: 5;
+}
+
+.overview {
+    font-size: 25px;
+    color: white;
+}

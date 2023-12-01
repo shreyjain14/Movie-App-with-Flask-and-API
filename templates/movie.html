@@ -1,0 +1,57 @@
+<html lang="en">
+
+<head>
+    <title>Movies App</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/movie.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/nav.css') }}">
+</head>
+
+<body style="background-image: url(http://image.tmdb.org/t/p/w500{{movie.backdrop_path}});">
+
+    <div class="nav">
+        <div class="nav2">
+            <table>
+                <tr>
+                    <td class="navtd">
+                        <a href="../../">HOME</a>
+                    </td>
+                    <td class="navtd">
+                        <a href="../../popular">POPULAR</a>
+                    </td>
+                    <td class="navtd">
+                        <a href="../../top_rated">TOP RATED</a>
+                    </td>
+                    <td class="navtd">
+                        <a href="../../upcoming">UPCOMING</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br>
+
+    {% block content %}
+    <table class="movieinfo">
+        <tr class="top">
+            <td>
+                <div class="movie" style="background-image: url(http://image.tmdb.org/t/p/w500{{movie.poster_path}});">
+                </div>
+            </td>
+            <td>
+                <div class="title">
+                    <span id="title">
+                        {{movie.title}}
+                    </span>
+                    <br><br>
+                    <p class="overview">
+                        {{movie.overview}}
+                    </p>
+                </div>
+            </td>
+        </tr>
+    </table>
+    {% endblock %}
+
+</body>
+</html>
