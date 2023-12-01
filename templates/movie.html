@@ -13,16 +13,16 @@
             <table>
                 <tr>
                     <td class="navtd">
-                        <a href="../../">HOME</a>
+                        <a href="{{ url_for('get_movies') }}">HOME</a>
                     </td>
                     <td class="navtd">
-                        <a href="../../popular">POPULAR</a>
+                        <a href="{{ url_for('get_movies_popular') }}">POPULAR</a>
                     </td>
                     <td class="navtd">
-                        <a href="../../top_rated">TOP RATED</a>
+                        <a href="{{ url_for('get_movies_top_rated') }}">TOP RATED</a>
                     </td>
                     <td class="navtd">
-                        <a href="../../upcoming">UPCOMING</a>
+                        <a href="{{ url_for('get_movies_upcoming') }}">UPCOMING</a>
                     </td>
                 </tr>
             </table>

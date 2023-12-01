@@ -1,9 +1,5 @@
-import json
-import os
-import urllib.request
 from main import get_movie_list, get_movie
-
-from flask import render_template, Flask
+from flask import render_template, Flask, url_for
 
 app = Flask(__name__)
 
